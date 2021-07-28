@@ -1,0 +1,3 @@
+Install anaconda.
+From terminal : Directory>jupyter notebook
+Restart kernel -> to save infinite loop cycle.

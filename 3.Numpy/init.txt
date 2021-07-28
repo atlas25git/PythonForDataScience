@@ -1,0 +1,93 @@
+Numpy:
+-----
+1. Linear algebra lib, binding c lib.
+2. pip install numpy
+3. Numpy arrays are the popular stuff.
+
+import numpy as np;
+
+arr = np.array(already_def_list)
+
+Generating linear arrays:
+np.arrange(0,11,step_size)
+>returns array containing 1....10
+
+np.zeros(number)
+np.zeros((n,n))
+    returns 2d matrix consisting of all zeros.
+
+np.ones(n)
+
+np.linspace(start,end,no_of_evenly_spaced_points_wanted)
+
+#Creating identity matrix:
+np.eye(n)
+    square matrix of side n, diag elements all 1.
+
+#Generating randomly populated matrices with uniform dist:
+
+np.random.rand(n,n)
+    2d matrix nxn populated with random values.
+
+#With gaussian/Normal distribution:
+np.random.randn(n,n)
+
+#Random int in range:
+np.random.randint(start,end,no_of_entities)
+
+#.reshape method
+No of elements should be same as before.
+arr.reshape(n,m)
+
+n*m == arr.length();
+
+arr.max()
+arr.min()
+
+#For index
+arr.argmax()
+arr.argmin()
+
+#Data type:
+arr.dtype
+
+#Getting values from numpy arrays:
+arr[x] => pos x's value
+arr[0:5] : [remember)
+arr[:] : full selection
+arr[5:] : Grabs everything from index 5(0 based indices) till the end.
+
+#BroadCast:
+arr[0:5] = 100
+>Replaces first 5 elements with 100.
+Even if we did it by storying the slice in some var, then too original
+array would have changed.
+
+#Creating copy of NP arrays:
+Explicit mention required
+arr1  = arr.copy()
+
+arr[i][j] == arr[i,j]
+
+#Comparisons:
+boolArr = arr>5
+returns an entire array of true or false based on condn.
+
+Using this in required array:
+arr[boolArry] -> returns all the posn with true as input/.
+=> arr[arr>5]
+
+#Numpy array operations:
+arr-arr
+arr * arr
+arr */+/-/'/'/** 9
+Applies the specified operation to all the array elements.
+ For some arr values with error proponents -> nan will be furnished.
+
+#Universal fns:
+---------------
+ np.sqrt(arr)
+ mp.exp(arr)
+ np.sin(arr)
+ np.log(arr)
+ np.sum(arr)

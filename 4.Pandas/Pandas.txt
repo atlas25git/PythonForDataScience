@@ -1,0 +1,75 @@
+Pandas:
+======
+1) Built on top of NumPy.
+2) pip install pandas
+
+Series:
+-------
+1) Similar to numPy.
+2) Labeling in pandas:
+    let's say we've our arra: 
+    myData = [10,20,30]
+    label = ['a','b','c']
+now pd.Series(data = my_data) will create a dataFrame
+with our data elements labelled agains 0 based indices.
+
+3) We can provide our own labels as well:
+    pd.Series(data = my_data,index=label);
+
+    a   10
+    b   20
+    c   30
+
+ 4) pd.Series(arr,labels)
+ 5) pd.Series(dict)
+    labels are the keys of dict elements.
+6) Accessing elements
+    pandaDFobj[keyLAbel]
+    ser3[0]
+7) Pandas/Numpy convert all the ints to floats.
+8) pdDF1 + pdDF2
+    Gives addn operations for matching keys, ones not found furnish an NaN.
+ 
+
+DataFrames:
+------------
+1. Creating a dataFrame
+
+    df = pd.DataFrame(randn(5,4),labelListConsistingOf5Markers, rowLabelListCosistingOf4Markers)
+
+2. df[colName]
+    return particular col, as a series.
+
+3. df[[colName1, colName2]]
+    returns a dataFrame of asked 2 columns.
+
+
+Adding New Col:
+--------------
+
+df['new'] = df['exisitngCol1'] + df['exisitngCol2'];
+
+Deleting a Col:
+---------------
+df.drop(colName,axis=1)
+By defaul axis is 0, which specifies the rows for cols axis = 1.
+
+This not always deletes the col from original dataFrame.
+To make this persist we provide an argument inplace=True; //false by default
+df.drop(colName,axis=1)
+
+Rows -> axis 0
+Cols -> axis 1
+coz row comes befor cols.
+
+#Selecting Rows:
+----------------
+1. df.loc[labelOfRow] 
+    return a series
+
+2. df.iloc[2] 
+    uses index rather than row name.
+
+#Selecting subset of the dataFrame:
+-----------------------------------
+df.loc[[rowName1,r2],[colName1,cN2]]
