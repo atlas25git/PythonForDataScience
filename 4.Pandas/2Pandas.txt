@@ -1,0 +1,51 @@
+Conditional Selection:
+=====================
+dataFrame1 = df > 0
+returns boolean df of same diensions
+
+df[df>0]
+#vals where consn true, else NAN
+
+# Could be done for even the cols
+df['colName']>0
+
+df[df['colName']>0] 
+# Filters out the rows which do not satisfy the given condition
+
+#Multiple consitions could also be applied
+df[(df['colName1']) & (df['colName2']>1)]
+and or -> & | for pandas based operations.
+
+#Adding a numbered index
+df.reset_index() : inplace for actual addn in df
+Old index labels become a columns
+
+#Setting a new index:
+
+newind = 'A B C D E'.split()
+newind -> is a list now
+
+df['newCol'] = newind # added new col
+
+#marking as default index:
+df.set_index('newCol') #Though it overrides the original index values.
+
+#zip
+listOfPairs = list(zip(l1,l2))
+
+#Adding hierarchical indices:
+
+inside = [1,2,3,1,2,3]
+outside = ['A','A','A','B','B','B']
+
+hierIndex = list(zip(outside,inside))
+
+df = pd.DataFrame(randn(6,2),hier_index,['A','B'])
+
+Pandas will automatically cluster them
+Now particular cluster could be called using df.loc['A']
+
+df.index_names = ['g1','g2'] # add names to cols
+
+#CrossSection: Helps us reference particular depth of indexName column
+df.xs(val,level='colName')

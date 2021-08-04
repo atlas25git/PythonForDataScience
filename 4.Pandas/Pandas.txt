@@ -7,7 +7,7 @@ Series:
 -------
 1) Similar to numPy.
 2) Labeling in pandas:
-    let's say we've our arra: 
+    let's say we've our array: 
     myData = [10,20,30]
     label = ['a','b','c']
 now pd.Series(data = my_data) will create a dataFrame
@@ -54,13 +54,20 @@ Deleting a Col:
 df.drop(colName,axis=1)
 By defaul axis is 0, which specifies the rows for cols axis = 1.
 
-This not always deletes the col from original dataFrame.
+df.drop(colName,axis=1,inplace=True);
+
+This doesn't delete the col from original dataFrame.
 To make this persist we provide an argument inplace=True; //false by default
 df.drop(colName,axis=1)
 
 Rows -> axis 0
 Cols -> axis 1
 coz row comes befor cols.
+
+Deleting Row:
+-------------
+df.drop(rowName,axis=0)
+
 
 #Selecting Rows:
 ----------------

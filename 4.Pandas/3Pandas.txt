@@ -1,0 +1,24 @@
+#Handling missing data
+
+np.nan: missing or null value
+
+#Drop null containig row/col
+df.drop(axis=0/1,thresh=countOfNANToKeep) #corresspondingly drops all the rows or cols consisting of nulls
+
+#df.fillna(value = 'VAL')
+Replaces all the occr of NAN with VAL provided.
+
+#Filling mean at na
+df['A'].fillna(value = df['A'].mean())
+nulls in A filled with the mean of A
+
+#GroupBY 
+groupedDf = df.groupby('colName')
+
+groupedDf is a groupby obect, which could be used to perform aggregate fns on it.
+
+groupedDf.mean/std/sum()
+
+df.groupby('comp').count()
+#generic overview
+df.groupby('comp').describe()./transpose()

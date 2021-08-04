@@ -1,0 +1,25 @@
+1. df.head() 
+
+#Finding unique values:
+len(df['col2'].unique())
+returns an array of unique values
+
+#returns how many times those unique values occrd
+df['col2'].value_counts()
+
+df[df['col1']>2] 
+
+#Apply method
+Lets us apply custom fn on each col value
+
+df['col1'].apply(lambda x: x*2)
+each value multiplied with 2;
+
+#sorting by particular col/row
+
+df.sort_values('col1')
+#axis lets us use rows too
+
+df.isnull()
+
+#Pivot Table:

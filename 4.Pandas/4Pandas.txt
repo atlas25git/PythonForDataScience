@@ -1,0 +1,19 @@
+#MErging Joinig and Concat
+
+pd.concat([df1,df2])
+concatenates dataframes if their dimensions are matching.
+Default axis of concat is 0, along the rows
+
+pd.concat([df1,df2],axis=1)
+It's like the full outer join, not matching cols furnish NaN
+
+#Merging allows us to merge data together based on some given logic
+
+pd.merge(left,right,how='inner',on='key')
+
+#as merge is for cols, join is used to merge on indices:
+
+#For potentially differently indexed dataFrames
+left.join(right)
+#contains values of colums for which indinces match as in left table's
+#else NaN filled

@@ -1,0 +1,19 @@
+#Data in pandas can be imported through following channels:
+
+1. CSV
+2. Excel
+3. HTML
+4. SQL
+
+#Bring the data files in same directory as current NB's
+df = pd.read_csv('*.csv')
+ 
+df.to_csv('My_output.csv',index=False);
+#old indices preserved if index = true
+
+#reading excel files:
+pd.read_excel('*.xlsx',sheetname='Sheet1')
+
+#reading excel html:
+pd.read_html('url')
+data[0] //first table found
