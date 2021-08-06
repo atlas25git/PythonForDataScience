@@ -1,0 +1,23 @@
+#Creating sub plots
+
+fig,axes = plt.subplots(nrows=n,ncols=m);
+plt.tight_layout()
+
+axes.plot(x,y)
+axes[0].plot(x,y)
+axes is an array of given dimensions, which could used to plot.
+
+#Figure size/DPI/Aspect Ratio
+
+fig, axes = plt.figure/subplots(figsize=(3,2),dpi = 100)
+                            inches
+                
+#SAving fig
+fig.savefig('name.AnyFormat',dpi=200)
+
+#Adding Legends
+#For this we nbeed to add label to all our .plot calls
+#At the end.
+ax.legend(loc=0)
+#0 corresponds to best possible
+#pr loc = (0.1,0.1) //left,bottom

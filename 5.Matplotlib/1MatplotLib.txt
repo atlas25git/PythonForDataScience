@@ -1,0 +1,55 @@
+#Built like matlab
+pip install matplotlib
+
+#gallery page provides us implementations for plot types
+
+#import matplotlib.pyplot as plt
+%matplotlib plt #allows to be used inside jupyter NB
+plt.plot(x,y) #in jupyter NB
+plt.show()
+
+#Adding labels:
+plt.xlabel('X label')
+plt.ylabel('Y label')
+plt.title('Title label')
+
+#multi plots on same canvas:
+#plt.subplot(r,c,quadrantNo)
+#plt.plot() for the particular quadrant
+
+plt.subplot(1,2,1)
+plt.plot(x,y,'r')
+
+plt.subplot(1,2,2)
+plt.plot(x,y,'b')
+
+#object oriented method
+
+fig = plt.figure()
+#rect : This parameter is the dimensions [left, bottom, width, height] of the new axes.
+#The dimensions [left, bottom, width, height] of the new Axes. 
+#All quantities are in fractions of figure width and height.
+
+axes = fig.add_axes([leftOfAxis,BottomOfAxis,length,width])
+axes.plot(x,y)
+
+axes.set_xlabel('xLabel')
+axes.set_ylabel('xLabel')
+axes.set_title('xLabel')
+
+#in a particular object of plt.figure() class many plots could be added
+fig = plt.figure()
+
+axes1 = fig.add_axes([0.1,0.1,0.8,0.8])
+axes2 = fig.add_axes([0.2,0.5,0.4,0.3])
+                    #   l, b,   h, w
+# 1 is the dimension of canvas
+
+#we can add set_title for diff axes's too
+
+
+
+plt.plot -> fig = plt.figure -> axes1 = fig.add_axes 
+                                axes2 = fig.add_axes
+
+ 

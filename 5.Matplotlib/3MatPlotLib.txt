@@ -1,0 +1,15 @@
+#customizing colors and stuff
+
+ax.plot(x,y,color='#rgb/colorName',linewidth/lw=1 to  n ,alpha=0.5, linestyle/ls= '--/-./:/steps', marker='o/+/*/1',markersize=10)
+ #some extra marker 
+ markerfacecolor = ''
+ markeredgewidth = n
+ markeredgecolor= 
+ 
+ #Setting upper/lower Bounds for both the axis:
+
+ ax.set_xlim([0,1])
+ ax.set_ylim([0,1])
+
+#Types of plots:
+Popular ones: Scatter/hist/box
